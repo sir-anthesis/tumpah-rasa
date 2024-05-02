@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\source\\repos\\TumpahRasa\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|c:\\users\\user\\source\\repos\\tumpahrasa\\tumpahrasa\\pages\\admin\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|solutionrelative:tumpahrasa\\pages\\admin\\default.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|C:\\Users\\User\\source\\repos\\TumpahRasa\\tumpahrasa\\pages\\admin\\create.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}",
+      "RelativeMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|solutionrelative:tumpahrasa\\pages\\admin\\create.aspx||{57312C73-6202-49E9-B1E1-40EA1A6DC1F6}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|C:\\Users\\User\\source\\repos\\TumpahRasa\\tumpahrasa\\globalvariable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|solutionrelative:tumpahrasa\\globalvariable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|C:\\Users\\User\\source\\repos\\TumpahRasa\\tumpahrasa\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|solutionrelative:tumpahrasa\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|C:\\Users\\User\\source\\repos\\TumpahRasa\\tumpahrasa\\pages\\admin\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|solutionrelative:tumpahrasa\\pages\\admin\\default.aspx.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|C:\\Users\\User\\source\\repos\\TumpahRasa\\tumpahrasa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|solutionrelative:tumpahrasa\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|C:\\Users\\User\\source\\repos\\TumpahRasa\\tumpahrasa\\pages\\admin\\adminmaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}",
+      "RelativeMoniker": "D:0:0:{2D626C2C-2A01-428B-8C8B-685AC89052BC}|TumpahRasa\\TumpahRasa.csproj|solutionrelative:tumpahrasa\\pages\\admin\\adminmaster.master||{B30AFBFF-D992-43B7-B62D-2642580A2883}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Default.aspx.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\Default.aspx.cs",
+              "RelativeDocumentMoniker": "TumpahRasa\\Pages\\Admin\\Default.aspx.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\Default.aspx.cs",
+              "RelativeToolTip": "TumpahRasa\\Pages\\Admin\\Default.aspx.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAwAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T09:29:03.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GlobalVariable.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\GlobalVariable.cs",
+              "RelativeDocumentMoniker": "TumpahRasa\\GlobalVariable.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\GlobalVariable.cs",
+              "RelativeToolTip": "TumpahRasa\\GlobalVariable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T09:24:52.371Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Connection.cs",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Connection.cs",
+              "RelativeDocumentMoniker": "TumpahRasa\\Connection.cs",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Connection.cs",
+              "RelativeToolTip": "TumpahRasa\\Connection.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAIwBYAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-02T09:23:00.464Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Web.config",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Web.config",
+              "RelativeDocumentMoniker": "TumpahRasa\\Web.config",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Web.config",
+              "RelativeToolTip": "TumpahRasa\\Web.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-05-02T09:22:08.255Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\Create.aspx",
+              "RelativeDocumentMoniker": "TumpahRasa\\Pages\\Admin\\Create.aspx",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\Create.aspx",
+              "RelativeToolTip": "TumpahRasa\\Pages\\Admin\\Create.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-02T08:19:09.301Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Default.aspx",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\Default.aspx",
+              "RelativeDocumentMoniker": "TumpahRasa\\Pages\\Admin\\Default.aspx",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\Default.aspx",
+              "RelativeToolTip": "TumpahRasa\\Pages\\Admin\\Default.aspx",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-02T08:09:10.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AdminMaster.Master",
+              "DocumentMoniker": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\AdminMaster.Master",
+              "RelativeDocumentMoniker": "TumpahRasa\\Pages\\Admin\\AdminMaster.Master",
+              "ToolTip": "C:\\Users\\User\\source\\repos\\TumpahRasa\\TumpahRasa\\Pages\\Admin\\AdminMaster.Master",
+              "RelativeToolTip": "TumpahRasa\\Pages\\Admin\\AdminMaster.Master",
+              "LogicalView": "7651a703-06e5-11d1-8ebd-00a0c90f26ea",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000195|",
+              "WhenOpened": "2024-05-02T07:57:15.099Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
