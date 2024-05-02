@@ -9,6 +9,8 @@
     <title>Modernize Free</title>
     <link rel="shortcut icon" type="image/png" href="../../App_Themes/AdminTheme/assets/images/logos/favicon.png" />
     <link rel="stylesheet" href="../../App_Themes/AdminTheme/assets/css/styles.min.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderCSS" runat="server"></asp:ContentPlaceHolder>
 </head>
 
 <body>
@@ -50,8 +52,6 @@
                                 <span class="hide-menu">Create</span>
                             </a>
                         </li>
-                    </ul>
-                    <ul id="sidebarnav">
                         <li class="nav-small-cap">
                             <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
                             <span class="hide-menu">VISITORS</span>
@@ -79,6 +79,7 @@
             <!-- End Sidebar scroll-->
         </aside>
         <!--  Sidebar End -->
+
         <!--  Main wrapper -->
         <div class="body-wrapper">
             <!--  Header Start -->
@@ -111,12 +112,25 @@
             </header>
             <!--  Header End -->
 
-            <!--  Content1 Start -->
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
-            <!--  Content1 End -->
+            <div class="container-fluid">
+                <!--  Flash Start -->
+                <div class="row mb-3">
+                    <div class="col-sm-12">
+                        <div class="alert alert-danger">
+                            <strong>jelek</strong>
+                        </div>
+                    </div>
+                </div>
+                <!--  Flash End -->
+
+                <!--  Content1 Start -->
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                <!--  Content1 End -->
+            </div>
 
         </div>
     </div>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderJS" runat="server"></asp:ContentPlaceHolder>
     <script src="../../App_Themes/AdminTheme/assets/libs/jquery/dist/jquery.min.js"></script>
     <script src="../../App_Themes/AdminTheme/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../../App_Themes/AdminTheme/assets/js/sidebarmenu.js"></script>
