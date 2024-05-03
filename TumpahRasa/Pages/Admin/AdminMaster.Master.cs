@@ -9,6 +9,8 @@ namespace TumpahRasa.Pages.Admin
 {
     public partial class AdminMaster : System.Web.UI.MasterPage
     {
+        public static string alert = "";
+        public static string msg = "";
         protected void Page_Load(object sender, EventArgs e)
         {
 

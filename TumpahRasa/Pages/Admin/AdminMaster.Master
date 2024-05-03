@@ -114,13 +114,16 @@
 
             <div class="container-fluid">
                 <!--  Flash Start -->
+                <% if (msg.Length > 0)
+                    { %>
                 <div class="row mb-3">
                     <div class="col-sm-12">
-                        <div class="alert alert-danger">
-                            <strong>jelek</strong>
+                        <div class="alert alert-<%: alert %>">
+                            <strong><%: msg %></strong>
                         </div>
                     </div>
                 </div>
+                <% } %>
                 <!--  Flash End -->
 
                 <!--  Content1 Start -->

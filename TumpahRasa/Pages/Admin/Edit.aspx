@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="Create.aspx.cs" Inherits="TumpahRasa.Pages.Admin.Create" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/Admin/AdminMaster.Master" AutoEventWireup="true" CodeBehind="Edit.aspx.cs" Inherits="TumpahRasa.Pages.Admin.Edit" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderCSS" runat="server">
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -13,17 +13,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title fw-semibold mb-4">Create Form</h5>
+            <h5 class="card-title fw-semibold mb-4">Edit Form</h5>
             <div class="card">
                 <div class="card-body">
                     <form enctype="multipart/form-data" method="post" runat="server">
                         <div class="mb-3">
                             <label for="exampleInputEmail1" class="form-label">Food Name</label>
-                            <input type="text" class="form-control" id="exampleInputName" name="name">
+                            <input type="text" class="form-control" id="name" name="name">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Thumbnail Picture</label>
-                            <input type="file" class="form-control" id="exampleInputThumb" name="thumb">
+                            <input type="file" class="form-control" id="thumb" name="thumb">
                         </div>
                         <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Description</label>
@@ -41,7 +41,6 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderJS" runat="server">
     <script>
         $('#summernote').summernote({
-            placeholder: 'Hello Deboraaa',
             tabsize: 2,
             height: 100
         });
