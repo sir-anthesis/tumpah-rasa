@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/TumpahRasa/TumphRasa.Master" AutoEventWireup="true" CodeBehind="Recipe.aspx.cs" Inherits="TumpahRasa.Pages.TumpahRasa.Recipe" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/TumpahRasa/TumphRasa.Master" AutoEventWireup="true" CodeBehind="Detail.aspx.cs" Inherits="TumpahRasa.Pages.TumpahRasa.Detail" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <div class="row-detail">

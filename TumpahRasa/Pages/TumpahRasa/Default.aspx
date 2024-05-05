@@ -6,41 +6,23 @@
 
         <div class="swiper home-slider">
             <div class="swiper-wrapper">
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <span>Our Special Dish</span>
-                        <h3>Cheesy Butt</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quasi modi voluptates.</p>
-                        <a href="#" class="btn">Order Now!</a>
-                    </div>
-                    <div class="image">
-                        <img src="image/hero-1.jpg" alt="">
-                    </div>
-                </div>
 
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <span>Our Special Dish</span>
-                        <h3>Pizza Cizza</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quasi modi voluptates.</p>
-                        <a href="#" class="btn">Order Now!</a>
-                    </div>
-                    <div class="image">
-                        <img src="image/hero-2.jpg" alt="">
-                    </div>
-                </div>
+                <asp:Repeater ID="JumbotronRepeater" runat="server">
+                    <ItemTemplate>
+                        <div class="swiper-slide slide">
+                            <div class="content">
+                                <span>Our Special Dish</span>
+                                <h3><%# Eval("name") %></h3>
+                                <p><%# Eval("rating") %> <i class="fas fa-star"></i></p>
+                                <a href="#" class="btn">Order Now!</a>
+                            </div>
+                            <div class="image">
+                                <img src="<%# Eval("thumbnail") %>" alt="rusak">
+                            </div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
 
-                <div class="swiper-slide slide">
-                    <div class="content">
-                        <span>Our Special Dish</span>
-                        <h3>Hot Shawty</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At quasi modi voluptates.</p>
-                        <a href="#" class="btn">Order Now!</a>
-                    </div>
-                    <div class="image">
-                        <img src="image/hero-3.jpg" alt="">
-                    </div>
-                </div>
             </div>
             <div class="swiper-pagination"></div>
         </div>
@@ -95,55 +77,29 @@
 
         <div class="box-container">
 
-            <div class="box">
-                <div class="icons">
-                    <button class="fas fa-heart stars"></button>
-                    <p>4.7 <i class="fas fa-star"></i></p>
-                </div>
-                <img src="image/hero-1.jpg" alt="">
-                <h3>Cheesy Butt</h3>
-                <a href="" class="btn">Add to Cart</a>
-            </div>
+            <asp:Repeater ID="RecipeRepeater" runat="server">
+                <ItemTemplate>
+                    <div class="box">
+                        <div class="icons">
+                            <button class="fas fa-heart stars"></button>
+                            <p><%# Eval("rating") %> <i class="fas fa-star"></i></p>
+                        </div>
+                        <img src="<%# Eval("thumbnail") %>" alt="">
+                        <h3><%# Eval("name") %></h3>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
+                </ItemTemplate>
+            </asp:Repeater>
 
-            <div class="box">
-                <div class="icons">
-                    <button class="fas fa-heart stars"></button>
-                    <p>4.7 <i class="fas fa-star"></i></p>
-                </div>
-                <img src="image/hero-1.jpg" alt="">
-                <h3>Cheesy Butt</h3>
-                <a href="" class="btn">Add to Cart</a>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <button class="fas fa-heart stars"></button>
-                    <p>4.7 <i class="fas fa-star"></i></p>
-                </div>
-                <img src="image/hero-1.jpg" alt="">
-                <h3>Cheesy Butt</h3>
-                <a href="" class="btn">Add to Cart</a>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <button class="fas fa-heart stars"></button>
-                    <p>4.7 <i class="fas fa-star"></i></p>
-                </div>
-                <img src="image/hero-1.jpg" alt="">
-                <h3>Cheesy Butt</h3>
-                <a href="" class="btn">Add to Cart</a>
-            </div>
-
-            <div class="box">
-                <div class="icons">
-                    <button class="fas fa-heart stars"></button>
-                    <p>4.7 <i class="fas fa-star"></i></p>
-                </div>
-                <img src="image/hero-1.jpg" alt="">
-                <h3>Cheesy Butt</h3>
-                <a href="" class="btn">Add to Cart</a>
-            </div>
+                                <div class="box">
+                        <div class="icons">
+                            <button class="fas fa-heart stars"></button>
+                            <p>4.7 <i class="fas fa-star"></i></p>
+                        </div>
+                        <img src="" alt="">
+                        <h3>AAA ASDASD SADASD KJKLJ</h3>
+                        <a href="" class="btn">Add to Cart</a>
+                    </div>
 
         </div>
 

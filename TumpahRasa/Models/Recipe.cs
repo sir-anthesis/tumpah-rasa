@@ -79,6 +79,7 @@ namespace TumpahRasa.Models
                     {
                         id = reader.GetInt32(0),
                         name = reader.GetString(1),
+                        thumbnail = reader.GetString(2),
                         rating = reader.GetDouble(6),
                         created_at = reader.GetDateTime(4).ToString("yyyy-MM-dd")
                     };
@@ -182,6 +183,7 @@ namespace TumpahRasa.Models
     {
         public int id { get; set; }
         public string name { get; set; }
+        public string thumbnail { get; set; }
         public double rating { get; set; }
         public string created_at { get; set; }
     }
