@@ -3,36 +3,17 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
     <div class="row-detail">
         <!-- Detail Section Started -->
-        <section class="detail" id="Detail">
+        <section class="detail" id="detail">
             <div class="image">
-                <img src="image/abt.jpg" alt="">
+                <img src="<%: thumbnail %>" alt="">
             </div>
             <div class="content">
                 <div class="info">
-                    <h1 class="heading">Ini nama makanannya</h1>
-                    <h3 class="sub-heading">ini tanggal sama ratingny</h3>
+                    <h1 class="heading"><%: name %></h1>
+                    <h3 class="sub-heading"><%: created_at %> <i class="fas fa-clock"></i> || <%: rating %> <i class="fas fa-star"></i></h3>
                 </div>
                 <div class="text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt officiis ipsam eos maiores
-                    consectetur reiciendis eligendi dolores possimus veritatis repudiandae at dolor fuga sint, pariatur
-                    nesciunt, explicabo amet quos nihil ipsa veniam a nulla fugiat. Odio quos nihil itaque iure
-                    molestias voluptatem similique perferendis rerum repudiandae excepturi atque, odit aut minus minima
-                    quae cupiditate in repellat. Totam tempora, consequuntur repellendus dicta, quae, dolore accusamus
-                    blanditiis enim voluptates quibusdam ex praesentium nostrum! Illo ipsam cupiditate doloremque
-                    perspiciatis magnam aspernatur magni ex eos modi repudiandae adipisci omnis minima dolorum, quis,
-                    explicabo voluptatum cum a impedit ipsa molestias accusantium libero. Quod, et officia.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam delectus aut sed reiciendis
-                    consequatur ut consequuntur similique, quis soluta. Voluptatibus facilis optio cumque veniam. Nisi,
-                    repellendus natus quisquam maiores doloremque dolores. Consequuntur obcaecati ad atque cupiditate.
-                    Repudiandae qui eos sunt culpa quia sint voluptas nisi. Minima aliquam, incidunt quia, dicta libero
-                    quam mollitia dolore eaque cupiditate, magni officiis eum nam harum quaerat sed officia blanditiis
-                    sapiente. Qui asperiores at explicabo! Iste doloribus id at eos fuga perferendis odio fugit unde.
-                    Totam, nobis unde magni laboriosam in, ea, eos officia earum doloremque minima maiores architecto.
-                    Esse perferendis nisi laudantium quae ullam!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, voluptatem. Neque ea in nemo
-                    voluptatem eius provident animi aspernatur quibusdam!
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis aliquam adipisci est
-                    aspernatur suscipit nisi iusto esse repellendus error minus!
+                <asp:Literal ID="DescLiteral" runat="server" Mode="PassThrough"></asp:Literal>
                 </div>
             </div>
         </section>

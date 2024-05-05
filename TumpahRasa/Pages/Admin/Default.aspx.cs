@@ -32,7 +32,7 @@ namespace TumpahRasa.Pages.Admin
         {
             Button button = (Button)sender;
             int id_recipe = Convert.ToInt32(button.CommandArgument);
-            GlobalVariable.recipe_selected = id_recipe;
+            GlobalVariable.admin_recipe_selected = id_recipe;
             Response.Redirect("Edit.aspx");
         }
     }

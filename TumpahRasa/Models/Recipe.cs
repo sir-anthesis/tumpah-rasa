@@ -13,7 +13,7 @@ namespace TumpahRasa.Models
     {
         public List<RecipeInfoList> ril = new List<RecipeInfoList>();
 
-        public string name, thumbnail, description;
+        public string name, thumbnail, description, created_at;
         public float rating;
 
         string flag;
@@ -116,6 +116,7 @@ namespace TumpahRasa.Models
                     name = reader.GetString(1);
                     thumbnail = reader.GetString(2);
                     description = reader.GetString(3);
+                    created_at = reader.GetDateTime(4).ToString("yyyy-MM-dd");
                 }
 
             }

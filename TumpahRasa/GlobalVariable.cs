@@ -10,6 +10,6 @@ namespace TumpahRasa
     {
         public static string connString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
         public static int adminId = 1;
-        public static int recipe_selected;
+        public static int admin_recipe_selected;
     }
 }

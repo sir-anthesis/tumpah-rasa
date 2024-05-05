@@ -397,6 +397,11 @@ header {
     padding-top: 8rem;
 }
 
+    .detail .text {
+        font-size: 2rem;
+        color: black;
+    }
+
     .detail .heading {
         text-align: left;
         padding-bottom: 0rem;

@@ -19,7 +19,7 @@ namespace TumpahRasa.Pages.Admin
                 Recipe rc = new Recipe();
 
                 // Call the GetAClient method to populate the Client object with data
-                rc .GetARecipe(GlobalVariable.recipe_selected);
+                rc.GetARecipe(GlobalVariable.admin_recipe_selected);
 
                 // RegisterStartupScript to execute JavaScript to set input values
                 string script = string.Format(
@@ -62,7 +62,7 @@ namespace TumpahRasa.Pages.Admin
             rc.description = description;
             rc.thumbnail = filePath;
 
-            if (rc.UpdateRecipe(GlobalVariable.recipe_selected) == "successed")
+            if (rc.UpdateRecipe(GlobalVariable.admin_recipe_selected) == "successed")
             {
                 postedFile.SaveAs(Server.MapPath("~/") + Path.Combine("App_Themes", "RecipeTheme", "thumbs", fileName));
             }
