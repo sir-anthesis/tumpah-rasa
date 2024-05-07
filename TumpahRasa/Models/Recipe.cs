@@ -139,10 +139,9 @@ namespace TumpahRasa.Models
             try
             {
                 con.OpenCon();
-                string query = "UPDATE tb_recipe SET name = @name, thumbnail = @thumbnail, description = @description, created_at = @created_at, id_admin = @id_admin WHERE id_recipe = @id_recipe";
+                string query = "UPDATE tb_recipe SET name = @name, description = @description, created_at = @created_at, id_admin = @id_admin WHERE id_recipe = @id_recipe";
                 SqlCommand com = new SqlCommand(query, con.myConnection);
                 com.Parameters.AddWithValue("name", name);
-                com.Parameters.AddWithValue("thumbnail", thumbnail);
                 com.Parameters.AddWithValue("description", description);
                 com.Parameters.AddWithValue("created_at", DateTime.Now);
                 com.Parameters.AddWithValue("id_admin", GlobalVariable.adminId);
@@ -159,6 +158,76 @@ namespace TumpahRasa.Models
                     flag = "failed";
                     AdminMaster.alert = "warning";
                     AdminMaster.msg = "Data created failed";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                flag = ex.Message;
+                AdminMaster.alert = "danger";
+                AdminMaster.msg = "Error : " + flag;
+            }
+            finally
+            {
+                if (con.myConnection.State == ConnectionState.Open)
+                {
+                    con.myConnection.Close();
+                    con.myConnection = null;
+                }
+            }
+            return flag;
+        }
+
+        public void GetThumbnail() 
+        {
+            try
+            {
+                con.OpenCon();
+                string query = "SELECT thumbnail FROM tb_recipe WHERE id_recipe = @id";
+                SqlCommand com = new SqlCommand(query, con.myConnection);
+                com.Parameters.AddWithValue("id", GlobalVariable.admin_recipe_selected);
+                SqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    EditThumb.old_thumb = reader.GetString(0);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            finally
+            {
+                if (con.myConnection.State == ConnectionState.Open)
+                {
+                    con.myConnection.Close();
+                    con.myConnection = null;
+                }
+            }
+        }
+
+        public string UpdateThumb(int id) 
+        {
+            try
+            {
+                con.OpenCon();
+                string query = "UPDATE tb_recipe SET thumbnail = @thumb WHERE id_recipe = @id_recipe";
+                SqlCommand com = new SqlCommand(query, con.myConnection);
+                com.Parameters.AddWithValue("thumb", thumbnail);
+                com.Parameters.AddWithValue("id_recipe", id);
+                int i = com.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    flag = "successed";
+                    AdminMaster.alert = "success";
+                    AdminMaster.msg = "Thumbnail updated success";
+                }
+                else
+                {
+                    flag = "failed";
+                    AdminMaster.alert = "warning";
+                    AdminMaster.msg = "Thumbnail updated failed";
                 }
 
             }

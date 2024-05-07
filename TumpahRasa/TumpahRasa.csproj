@@ -94,6 +94,7 @@
     <Content Include="Pages\Admin\Create.aspx" />
     <Content Include="Pages\Admin\Default.aspx" />
     <Content Include="Pages\Admin\Edit.aspx" />
+    <Content Include="Pages\Admin\EditThumb.aspx" />
     <Content Include="Pages\TumpahRasa\Default.aspx" />
     <Content Include="Pages\TumpahRasa\Detail.aspx" />
     <Content Include="Web.config" />
@@ -132,6 +133,13 @@
     </Compile>
     <Compile Include="Pages\Admin\Edit.aspx.designer.cs">
       <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Admin\EditThumb.aspx.cs">
+      <DependentUpon>EditThumb.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Admin\EditThumb.aspx.designer.cs">
+      <DependentUpon>EditThumb.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\TumpahRasa\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

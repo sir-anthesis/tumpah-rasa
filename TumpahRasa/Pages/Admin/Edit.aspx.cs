@@ -52,20 +52,15 @@ namespace TumpahRasa.Pages.Admin
             string name = Request.Form["name"];
             string description = Request.Form["description"];
 
-            HttpPostedFile postedFile = Request.Files["thumb"];
-            string fileName = Path.GetFileName(postedFile.FileName);
-            string uploadDirectory = "..\\..\\App_Themes\\RecipeTheme\\thumbs\\";
-            string filePath = Path.Combine(uploadDirectory, fileName);
-
             Recipe rc = new Recipe();
             rc.name = name;
             rc.description = description;
-            rc.thumbnail = filePath;
+            rc.UpdateRecipe(GlobalVariable.admin_recipe_selected);
+        }
 
-            if (rc.UpdateRecipe(GlobalVariable.admin_recipe_selected) == "successed")
-            {
-                postedFile.SaveAs(Server.MapPath("~/") + Path.Combine("App_Themes", "RecipeTheme", "thumbs", fileName));
-            }
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("EditThumb.aspx");
         }
     }
 }

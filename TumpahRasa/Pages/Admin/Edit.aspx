@@ -22,15 +22,12 @@
                             <input type="text" class="form-control" id="name" name="name">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label">Thumbnail Picture</label>
-                            <input type="file" class="form-control" id="thumb" name="thumb">
-                        </div>
-                        <div class="mb-3">
                             <label for="exampleInputPassword1" class="form-label">Description</label>
                             <div id="summernote"></div>
                             <input type="hidden" id="summernoteContent" name="description">
                         </div>
-                        <asp:Button ID="Button1" runat="server" Text="SUBMIT" CssClass="btn btn-primary" OnClick="Button1_Click" />
+                        <asp:Button ID="Button1" runat="server" Text="SUBMIT" CssClass="btn btn-primary me-2" OnClick="Button1_Click" />
+                        <asp:Button ID="Button2" runat="server" Text="EDIT THUMB" CssClass="btn btn-primary" OnClick="Button2_Click" />
                     </form>
                 </div>
             </div>
