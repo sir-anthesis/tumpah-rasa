@@ -49,6 +49,9 @@ CREATE TABLE tb_loved (
 --Insert tb_admin
 INSERT INTO tb_admin values ('admin1', 'admin1@gmail.com', 'admin1');
 
+--Insert tb_member
+INSERT INTO tb_member values ('akun1', 'akun1@gmail.com', 'akun1');
+
 
 --TRIGGERS
 --Create trigger UpdateRecipeRating
@@ -88,10 +91,4 @@ BEGIN
         WHERE id_recipe = @RecipeID;
     END
 END;
-
-
-
-DROP TRIGGER IF EXISTS UpdateRecipeRating;
-
-TRUNCATE TABLE tb_comment;
 
