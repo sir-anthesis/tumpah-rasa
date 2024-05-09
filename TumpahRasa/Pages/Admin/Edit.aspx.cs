@@ -11,19 +11,22 @@ namespace TumpahRasa.Pages.Admin
 {
     public partial class Edit : System.Web.UI.Page
     {
+        public int id;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Request.QueryString["id"] != null)
             {
-                // Create a new instance of the Client class
-                Recipe rc = new Recipe();
+                    id = Convert.ToInt32(Request.QueryString["id"])
+                        ;
+                    // Create a new instance of the Client class
+                    Recipe rc = new Recipe();
 
-                // Call the GetAClient method to populate the Client object with data
-                rc.GetARecipe(GlobalVariable.admin_recipe_selected);
+                    // Call the GetAClient method to populate the Client object with data
+                    rc.GetARecipe(id);
 
-                // RegisterStartupScript to execute JavaScript to set input values
-                string script = string.Format(
-                  @"<script>
+                    // RegisterStartupScript to execute JavaScript to set input values
+                    string script = string.Format(
+                      @"<script>
                       $(document).ready(function () {{
                           $('#name').val('{0}');
                           $('#summernote').summernote();
@@ -38,7 +41,7 @@ namespace TumpahRasa.Pages.Admin
                           return txt.value;
                       }}
                     </script>",
-                    rc.name, rc.description);
+                        rc.name, rc.description);
 
                 if (!ClientScript.IsStartupScriptRegistered("SetInputValues"))
                 {
@@ -55,12 +58,7 @@ namespace TumpahRasa.Pages.Admin
             Recipe rc = new Recipe();
             rc.name = name;
             rc.description = description;
-            rc.UpdateRecipe(GlobalVariable.admin_recipe_selected);
-        }
-
-        protected void Button2_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("EditThumb.aspx");
+            rc.UpdateRecipe(id);
         }
     }
 }

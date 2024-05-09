@@ -87,7 +87,7 @@
                             </div>
                             <img src="<%# Eval("thumbnail") %>" alt="">
                             <h3><%# Eval("name") %></h3>
-                            <a href="" class="btn">Add to Cart</a>
+                            <a href="Detail.aspx?id=<%# Eval("id") %>" class="btn">Add to Cart</a>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>

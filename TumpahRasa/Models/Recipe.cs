@@ -14,7 +14,7 @@ namespace TumpahRasa.Models
         public List<RecipeInfoList> ril = new List<RecipeInfoList>();
 
         public string name, thumbnail, description, created_at;
-        public float rating;
+        public double rating;
 
         string flag;
 
@@ -59,7 +59,6 @@ namespace TumpahRasa.Models
                 if (con.myConnection.State == ConnectionState.Open)
                 {
                     con.myConnection.Close();
-                    con.myConnection = null;
                 }
             }
             return flag;
@@ -70,7 +69,7 @@ namespace TumpahRasa.Models
             try
             {
                 con.OpenCon();
-                string query = "SELECT * FROM tb_recipe";
+                string query = "SELECT * FROM tb_recipe ORDER BY created_at DESC";
                 SqlCommand com = new SqlCommand(query, con.myConnection);
                 SqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
@@ -97,7 +96,6 @@ namespace TumpahRasa.Models
                 if (con.myConnection.State == ConnectionState.Open)
                 {
                     con.myConnection.Close();
-                    con.myConnection = null;
                 }
             }
         }
@@ -116,7 +114,8 @@ namespace TumpahRasa.Models
                     name = reader.GetString(1);
                     thumbnail = reader.GetString(2);
                     description = reader.GetString(3);
-                    created_at = reader.GetDateTime(4).ToString("yyyy-MM-dd");
+                    created_at = reader.GetDateTime(4).ToString("dd-MMMM-yyyy");
+                    rating = reader.GetDouble(6);
                 }
 
             }
@@ -129,7 +128,6 @@ namespace TumpahRasa.Models
                 if (con.myConnection.State == ConnectionState.Open)
                 {
                     con.myConnection.Close();
-                    con.myConnection = null;
                 }
             }
         }
@@ -172,20 +170,19 @@ namespace TumpahRasa.Models
                 if (con.myConnection.State == ConnectionState.Open)
                 {
                     con.myConnection.Close();
-                    con.myConnection = null;
                 }
             }
             return flag;
         }
 
-        public void GetThumbnail() 
+        public void GetThumbnail(int id) 
         {
             try
             {
                 con.OpenCon();
                 string query = "SELECT thumbnail FROM tb_recipe WHERE id_recipe = @id";
                 SqlCommand com = new SqlCommand(query, con.myConnection);
-                com.Parameters.AddWithValue("id", GlobalVariable.admin_recipe_selected);
+                com.Parameters.AddWithValue("id", id);
                 SqlDataReader reader = com.ExecuteReader();
                 while (reader.Read())
                 {
@@ -202,7 +199,6 @@ namespace TumpahRasa.Models
                 if (con.myConnection.State == ConnectionState.Open)
                 {
                     con.myConnection.Close();
-                    con.myConnection = null;
                 }
             }
         }
@@ -242,7 +238,6 @@ namespace TumpahRasa.Models
                 if (con.myConnection.State == ConnectionState.Open)
                 {
                     con.myConnection.Close();
-                    con.myConnection = null;
                 }
             }
             return flag;

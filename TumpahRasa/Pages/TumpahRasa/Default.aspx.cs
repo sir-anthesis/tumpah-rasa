@@ -20,7 +20,7 @@ namespace TumpahRasa.Pages.TumpahRasa
                 rc.ShowRecipe();
 
                 // Bind the cil list to the repeater
-                JumbotronRepeater.DataSource = rc.ril;
+                JumbotronRepeater.DataSource = rc.ril.Take(3);
                 JumbotronRepeater.DataBind();
                 RecipeRepeater.DataSource = rc.ril;
                 RecipeRepeater.DataBind();

@@ -27,7 +27,7 @@
                             <input type="hidden" id="summernoteContent" name="description">
                         </div>
                         <asp:Button ID="Button1" runat="server" Text="SUBMIT" CssClass="btn btn-primary me-2" OnClick="Button1_Click" />
-                        <asp:Button ID="Button2" runat="server" Text="EDIT THUMB" CssClass="btn btn-primary" OnClick="Button2_Click" />
+                        <a href="EditThumb.aspx?id=<%: id %>" class="btn btn-primary">EDIT THUMB</a>
                     </form>
                 </div>
             </div>

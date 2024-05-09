@@ -30,10 +30,6 @@ namespace TumpahRasa.Pages.Admin
 
         protected void Edit_Click(object sender, EventArgs e) 
         {
-            Button button = (Button)sender;
-            int id_recipe = Convert.ToInt32(button.CommandArgument);
-            GlobalVariable.admin_recipe_selected = id_recipe;
-            Response.Redirect("Edit.aspx");
         }
     }
 }

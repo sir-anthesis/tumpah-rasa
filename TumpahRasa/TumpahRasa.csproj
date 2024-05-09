@@ -105,6 +105,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalVariable.cs" />
+    <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Pages\Admin\AdminMaster.Master.cs">
       <DependentUpon>AdminMaster.Master</DependentUpon>

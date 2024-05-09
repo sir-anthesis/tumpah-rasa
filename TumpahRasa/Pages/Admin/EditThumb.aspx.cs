@@ -12,12 +12,17 @@ namespace TumpahRasa.Pages.Admin
     public partial class EditThumb : System.Web.UI.Page
     {
         public static string old_thumb;
+        public int id;
 
         Recipe rc = new Recipe();
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            rc.GetThumbnail();
+            if (Request.QueryString["id"] != null)
+            {
+                id = Convert.ToInt32(Request.QueryString["id"]);
+                rc.GetThumbnail(id);
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -30,7 +35,7 @@ namespace TumpahRasa.Pages.Admin
             Recipe rc = new Recipe();
             rc.thumbnail = filePath;
 
-            if (rc.UpdateThumb(GlobalVariable.admin_recipe_selected) == "successed")
+            if (rc.UpdateThumb(id) == "successed")
             {
                 postedFile.SaveAs(Server.MapPath("~/") + Path.Combine("App_Themes", "RecipeTheme", "thumbs", fileName));
             }

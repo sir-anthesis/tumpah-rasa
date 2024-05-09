@@ -44,6 +44,54 @@ CREATE TABLE tb_loved (
     PRIMARY KEY (id_member, id_recipe)
 );
 
+
 --INSERTING VALUES
 --Insert tb_admin
 INSERT INTO tb_admin values ('admin1', 'admin1@gmail.com', 'admin1');
+
+
+--TRIGGERS
+--Create trigger UpdateRecipeRating
+CREATE TRIGGER UpdateRecipeRating
+ON tb_comment
+AFTER INSERT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    DECLARE @RecipeID INT,
+            @Rating FLOAT,
+            @AvgRating FLOAT;
+
+    -- Get the newly inserted values
+    SELECT @RecipeID = id_recipe, @Rating = rating
+    FROM inserted;
+
+    -- Check if it's the first comment for the recipe
+    IF NOT EXISTS (SELECT 1 FROM tb_comment WHERE id_recipe = @RecipeID AND id_comment <> (SELECT MAX(id_comment) FROM tb_comment WHERE id_recipe = @RecipeID))
+    BEGIN
+        -- Update tb_recipe with the rating from tb_comment
+        UPDATE tb_recipe
+        SET rating = @Rating
+        WHERE id_recipe = @RecipeID;
+    END
+    ELSE
+    BEGIN
+        -- Calculate the average rating for the recipe and round it to one decimal place
+        SELECT @AvgRating = ROUND(AVG(CAST(rating AS FLOAT)), 1)  -- Ensure floating-point division
+        FROM tb_comment
+        WHERE id_recipe = @RecipeID;
+
+        -- Update tb_recipe with the average rating
+        UPDATE tb_recipe
+        SET rating = @AvgRating
+        WHERE id_recipe = @RecipeID;
+    END
+END;
+
+
+
+DROP TRIGGER IF EXISTS UpdateRecipeRating;
+
+TRUNCATE TABLE tb_comment;
+

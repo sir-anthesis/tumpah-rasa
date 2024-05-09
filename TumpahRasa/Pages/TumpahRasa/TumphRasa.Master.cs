@@ -9,6 +9,7 @@ namespace TumpahRasa.Pages.TumpahRasa
 {
     public partial class TumphRasa : System.Web.UI.MasterPage
     {
+        public static string msg;
         protected void Page_Load(object sender, EventArgs e)
         {
 
