@@ -242,6 +242,41 @@ namespace TumpahRasa.Models
             }
             return flag;
         }
+
+        public string LoveRecipe(int id) 
+        {
+            try
+            {
+                con.OpenCon();
+                string query = "INSERT INTO tb_loved (id_member, id_recipe, loved_at) VALUES (@id_member, @id_recipe, @loved_at)";
+                SqlCommand com = new SqlCommand(query, con.myConnection);
+                com.Parameters.AddWithValue("id_member", GlobalVariable.memberId);
+                com.Parameters.AddWithValue("id_recipe", id);
+                com.Parameters.AddWithValue("loved_at", DateTime.Now);
+                int i = com.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    flag = "successed";
+                }
+                else
+                {
+                    flag = "failed";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                flag = ex.Message;
+            }
+            finally
+            {
+                if (con.myConnection.State == ConnectionState.Open)
+                {
+                    con.myConnection.Close();
+                }
+            }
+            return flag;
+        }
     }
 
     public class RecipeInfoList

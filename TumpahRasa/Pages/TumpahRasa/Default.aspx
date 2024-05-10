@@ -82,7 +82,7 @@
                     <ItemTemplate>
                         <div class="box">
                             <div class="icons">
-                                <button class="fas fa-heart stars"></button>
+                                <asp:LinkButton ID="LinkButton1" runat="server" CssClass="fas fa-heart stars" CommandArgument='<%# Eval("id") %>' OnCommand="BtnLove"></asp:LinkButton>
                                 <p><%# Eval("rating") %> <i class="fas fa-star"></i></p>
                             </div>
                             <img src="<%# Eval("thumbnail") %>" alt="">

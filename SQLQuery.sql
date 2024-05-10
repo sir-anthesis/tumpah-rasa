@@ -92,3 +92,33 @@ BEGIN
     END
 END;
 
+--Create trigger before insert tb_loved
+CREATE TRIGGER trg_insert_tb_loved
+ON tb_loved
+INSTEAD OF INSERT
+AS
+BEGIN
+    IF EXISTS (
+        SELECT 1
+        FROM inserted i
+        WHERE EXISTS (
+            SELECT 1
+            FROM tb_loved l
+            WHERE l.id_member = i.id_member
+            AND l.id_recipe = i.id_recipe
+        )
+    )
+    BEGIN
+        RAISERROR ('You already loved this recipe', 16, 1);
+    END
+    ELSE
+    BEGIN
+        INSERT INTO tb_loved (id_member, id_recipe, loved_at)
+        SELECT id_member, id_recipe, loved_at
+        FROM inserted;
+    END
+END;
+
+
+
+
