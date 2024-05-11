@@ -51,8 +51,8 @@ namespace TumpahRasa.Pages.TumpahRasa
                     Response.Write("<script>alert('" + msg + "');</script>");
                 }
 
-                // Redirect to Loved.aspx after 1 seconds (2000 milliseconds)
-                Response.Write("<script>setTimeout(function() { window.location.href = 'Loved.aspx'; }, 1000);</script>");
+                // Redirect to Loved.aspx after 1 seconds
+                Response.Write("<script>setTimeout(function() { window.location.href = 'Default.aspx'; }, 1000);</script>");
             }
             
         }

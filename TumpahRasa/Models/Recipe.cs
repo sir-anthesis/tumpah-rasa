@@ -277,6 +277,42 @@ namespace TumpahRasa.Models
             }
             return flag;
         }
+
+        public void ShowLove(int id) 
+        {
+            try
+            {
+                con.OpenCon();
+                string query = "SELECT r.id_recipe, r.name, r.thumbnail, r.rating FROM tb_loved AS l JOIN tb_recipe AS r ON l.id_recipe = r.id_recipe WHERE l.id_member = @id";
+                SqlCommand com = new SqlCommand(query, con.myConnection);
+                com.Parameters.AddWithValue("id", id);
+                SqlDataReader reader = com.ExecuteReader();
+                while (reader.Read())
+                {
+                    RecipeInfoList ri = new RecipeInfoList
+                    {
+                        id = reader.GetInt32(0),
+                        name = reader.GetString(1),
+                        thumbnail = reader.GetString(2),
+                        rating = reader.GetDouble(3),
+                    };
+
+                    ril.Add(ri);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Default.tt = ("error" + ex);
+            }
+            finally
+            {
+                if (con.myConnection.State == ConnectionState.Open)
+                {
+                    con.myConnection.Close();
+                }
+            }
+        }
     }
 
     public class RecipeInfoList
