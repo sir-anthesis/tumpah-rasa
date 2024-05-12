@@ -28,8 +28,15 @@ namespace TumpahRasa.Pages.Admin
             }
         }
 
-        protected void Edit_Click(object sender, EventArgs e) 
+        protected void Delete_Click(object sender, EventArgs e) 
         {
+            Button button = (Button)sender;
+            int id = Convert.ToInt32(button.CommandArgument);
+
+            Response.Write("<script> confirm('Are you sure you want to delete this recipe?') </script>");
+
+            string msg = rc.DeleteRecipe(id);
+
         }
     }
 }

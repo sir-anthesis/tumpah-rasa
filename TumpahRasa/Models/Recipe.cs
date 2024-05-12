@@ -313,6 +313,45 @@ namespace TumpahRasa.Models
                 }
             }
         }
+
+        public string DeleteRecipe (int id) 
+        {
+            try
+            {
+                con.OpenCon();
+                string query = "DELETE FROM tb_recipe WHERE id_recipe = @id";
+                SqlCommand com = new SqlCommand(query, con.myConnection);
+                com.Parameters.AddWithValue("id", id);
+                int i = com.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    flag = "successed";
+                    AdminMaster.alert = "success";
+                    AdminMaster.msg = "Data deleted success";
+                }
+                else
+                {
+                    flag = "failed";
+                    AdminMaster.alert = "warning";
+                    AdminMaster.msg = "Data deleted failed";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                flag = ex.Message;
+                AdminMaster.alert = "danger";
+                AdminMaster.msg = flag;
+            }
+            finally
+            {
+                if (con.myConnection.State == ConnectionState.Open)
+                {
+                    con.myConnection.Close();
+                }
+            }
+            return flag;
+        }
     }
 
     public class RecipeInfoList

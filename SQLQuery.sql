@@ -120,5 +120,17 @@ BEGIN
 END;
 
 
+-- Add cascade on delete
+ALTER TABLE tb_comment
+ADD CONSTRAINT FK_tb_comment_tb_recipe FOREIGN KEY (id_recipe)
+REFERENCES tb_recipe(id_recipe)
+ON DELETE CASCADE;
+
+ALTER TABLE tb_loved
+ADD CONSTRAINT FK_tb_loved_tb_recipe FOREIGN KEY (id_recipe)
+REFERENCES tb_recipe(id_recipe)
+ON DELETE CASCADE;
+
+
 
 

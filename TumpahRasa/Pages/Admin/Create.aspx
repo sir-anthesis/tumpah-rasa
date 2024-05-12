@@ -41,7 +41,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolderJS" runat="server">
     <script>
         $('#summernote').summernote({
-            placeholder: 'Hello Deboraaa',
+            placeholder: 'Insert the description here....',
             tabsize: 2,
             height: 100
         });

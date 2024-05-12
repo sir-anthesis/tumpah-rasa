@@ -84,6 +84,12 @@
     <Content Include="App_Themes\AdminTheme\assets\js\app.min.js" />
     <Content Include="App_Themes\AdminTheme\assets\js\dashboard.js" />
     <Content Include="App_Themes\AdminTheme\assets\js\sidebarmenu.js" />
+    <Content Include="App_Themes\LoginTheme\app.js" />
+    <Content Include="App_Themes\LoginTheme\img\img1.jpg" />
+    <Content Include="App_Themes\LoginTheme\img\img2.jpg" />
+    <Content Include="App_Themes\LoginTheme\img\log.svg" />
+    <Content Include="App_Themes\LoginTheme\img\register.svg" />
+    <Content Include="App_Themes\LoginTheme\style3.css" />
     <Content Include="App_Themes\RecipeTheme\asset\abt.jpg" />
     <Content Include="App_Themes\RecipeTheme\css\style.css" />
     <Content Include="App_Themes\RecipeTheme\js\script.js" />
@@ -107,6 +113,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="GlobalVariable.cs" />
+    <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Comment.cs" />
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Pages\Admin\AdminMaster.Master.cs">
@@ -210,7 +217,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="App_Themes\LoginTheme\" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />

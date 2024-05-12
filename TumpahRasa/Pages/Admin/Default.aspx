@@ -38,8 +38,6 @@
                                                 </td>
                                                 <td class="border-bottom-0">
                                                     <h6 class="fw-semibold mb-1"><%# Eval("name") %></h6>
-                                                    <span class="fw-normal">
-                                                        <asp:HyperLink ID="HyperLink1" runat="server" CommandArgument='<%# Eval("id") %>'>View Comments</asp:HyperLink></span>
                                                 </td>
                                                 <td class="border-bottom-0">
                                                     <p class="mb-0 fw-normal"><%# Eval("rating") %></p>
@@ -49,7 +47,7 @@
                                                 </td>
                                                 <td class="border-bottom-0">
                                                     <a href="Edit.aspx?id=<%# Eval("id") %>" class="btn btn-warning">EDIT</a>
-                                                    <asp:Button ID="Button2" runat="server" Text="DELETE" CommandArgument='<%# Eval("id") %>' CssClass="btn btn-danger" />
+                                                    <asp:Button ID="Button2" runat="server" Text="DELETE" CommandArgument='<%# Eval("id") %>' OnClick="Delete_Click" CssClass="btn btn-danger" />
                                                 </td>
                                             </tr>
                                         </ItemTemplate>

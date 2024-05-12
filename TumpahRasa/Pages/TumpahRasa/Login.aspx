@@ -7,15 +7,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="../../App_Themes/LoginTheme/style.css" />
+  <link rel="stylesheet" href="../../App_Themes/LoginTheme/style3.css" />
   <title>Login and register</title>
 </head>
 
 <body>
   <div class="container">
-    <div class="forms-container">
+    <form runat="server" class="forms-container">
       <div class="signin-signup">
-        <form action="#" class="sign-in-form">
+        <div id="form" class="sign-in-form">
           <h2 class="title">Log in</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
@@ -25,26 +25,26 @@
             <i class="fas fa-lock"></i>
             <input type="password" placeholder="Password" />
           </div>
-          <input type="submit" value="Login" class="btn solid" />
-        </form>
-        <form action="#" class="sign-up-form">
+            <asp:Button ID="Button1" runat="server" Text="Login" CssClass="btn solid" />
+        </div>
+        <div id="form" class="sign-up-form">
           <h2 class="title">Register</h2>
           <div class="input-field">
             <i class="fas fa-user"></i>
-            <input type="text" placeholder="Username" />
+            <input type="text" placeholder="Username" name="rname" />
           </div>
           <div class="input-field">
             <i class="fas fa-envelope"></i>
-            <input type="email" placeholder="Email" />
+            <input type="email" placeholder="Email" name="remail" />
           </div>
           <div class="input-field">
             <i class="fas fa-lock"></i>
-            <input type="password" placeholder="Password" />
+            <input type="password" placeholder="Password" name="rpw" />
           </div>
-          <input type="submit" class="btn" value="Register" />
-        </form>
+            <asp:Button ID="Button2" runat="server" Text="Register" CssClass="btn" OnClick="Register" />
+        </div>
       </div>
-    </div>
+    </form>
 
     <div class="panels-container">
       <div class="panel left-panel">
