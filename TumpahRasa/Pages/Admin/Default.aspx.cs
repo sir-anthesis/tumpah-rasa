@@ -17,6 +17,9 @@ namespace TumpahRasa.Pages.Admin
         {
             if (!IsPostBack)
             {
+                AdminMaster.msg = "";
+                AdminMaster.alert = "";
+
                 // Call the ShowClient method to populate cil list
                 rc.ShowRecipe();
 
@@ -37,6 +40,16 @@ namespace TumpahRasa.Pages.Admin
 
             string msg = rc.DeleteRecipe(id);
 
+            // Redirect to Loved.aspx after 2 seconds
+            Response.Write("<script>setTimeout(function() { window.location.href = 'Default.aspx'; }, 2000);</script>");
+
+        }
+
+        protected void Logout_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            GlobalVariable.adminId = 0;
+            Response.Redirect("~/Pages/TumpahRasa/Login.aspx");
         }
     }
 }

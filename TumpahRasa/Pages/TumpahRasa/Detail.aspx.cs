@@ -65,11 +65,17 @@ namespace TumpahRasa.Pages.TumpahRasa
             {
                 alert = "alert('" + TumphRasa.msg + "');";
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", alert, true);
+
+                // Redirect to Loved.aspx after 1 seconds
+                Response.Write("<script>setTimeout(function() { window.location.href = 'Detail.aspx?id=" + id + "'; }, 1000);</script>");
             }
             else if (cm.InsertComment(id) == "failed")
             {
                 alert = "alert('" + TumphRasa.msg + "');";
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", alert, true);
+
+                // Redirect to Loved.aspx after 1 seconds
+                Response.Write("<script>setTimeout(function() { window.location.href = 'Detail.aspx?id=" + id + "'; }, 1000);</script>");
             }
             else
             {

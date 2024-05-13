@@ -48,23 +48,36 @@ namespace TumpahRasa.Pages.TumpahRasa
             {
                 if (checkremember.Checked)
                 {
-                    Response.Write("remember me checked");
+                    HttpCookie userinfo = new HttpCookie("userinfo");
+                    userinfo["username"] =  name;
+                    userinfo.Expires = DateTime.Now.AddDays(1);
+                    Response.Cookies.Add(userinfo);
                 }
-                Response.Write("Login as member");
+                Session["username"] = name;
+                Session["log_stat"] = true;
+                Session["role"] = "member";
+                Response.Redirect("Default.aspx");
             }
             else if (msg == "admin")
             {
                 if (checkremember.Checked)
                 {
-                    Response.Write("remember me checked");
+                    HttpCookie userinfo = new HttpCookie("userinfo");
+                    userinfo["username"] = name;
+                    userinfo.Expires = DateTime.Now.AddDays(1);
+                    Response.Cookies.Add(userinfo);
                 }
-                Response.Write("login as admin");
+                Session["username"] = name;
+                Session["log_stat"] = true;
+                Session["role"] = "admin";
+                Response.Redirect("~/Pages/Admin/Default.aspx");
             }
             else
             {
-                Response.Write(msg);
-                Response.Write("name = " + name);
-                Response.Write("pw = " + password);
+                Response.Write("<script> alert('" + msg + "'); </script>");
+
+                // Redirect to Loved.aspx after 1 seconds
+                Response.Write("<script>setTimeout(function() { window.location.href = 'Login.aspx'; }, 1000);</script>");
             }
 
         }

@@ -55,10 +55,7 @@
             <div class="panel left-panel">
                 <div class="content">
                     <h3>New here ?</h3>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
-            ex ratione. Aliquid!
-                    </p>
+                    <p> Welcome to Tumpah Rasa, your digital kitchen of endless culinary inspiration!</p>
                     <button class="btn transparent" id="sign-up-btn">Register</button>
                 </div>
                 <img src="../../App_Themes/LoginTheme/img/img1.jpg" class="image" alt="" />
@@ -67,8 +64,7 @@
                 <div class="content">
                     <h3>One of us ?</h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-            laboriosam ad deleniti.
+                         Welcome to Tumpah Rasa, your digital kitchen of endless culinary inspiration!
                     </p>
                     <button class="btn transparent" id="sign-in-btn">Login</button>
                 </div>

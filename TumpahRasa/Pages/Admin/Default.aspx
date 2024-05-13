@@ -7,7 +7,10 @@
             <div class="col-lg-12 d-flex align-items-stretch">
                 <div class="card w-100">
                     <div class="card-body p-4">
-                        <h5 class="card-title fw-semibold mb-4">Recent Transactions</h5>
+                        <div style="display:flex; justify-content:space-between; align-items:center;">
+                            <h5 class="card-title fw-semibold mb-4">Recent Insertions</h5>
+                            <asp:Button ID="Button1" runat="server" Text="Logout" CssClass="btn btn-primary" />
+                        </div>
                         <div class="table-responsive">
                             <table class="table text-nowrap mb-0 align-middle">
                                 <thead class="text-dark fs-4">

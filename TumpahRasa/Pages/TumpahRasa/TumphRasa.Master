@@ -24,28 +24,22 @@
 </head>
 
 <body>
-
+    <form runat="server">
     <!-- Header Section Started -->
     <header>
         <a href="#" class="logo">Tumpah Rasa<i class="fa-solid fa-utensils"></i></a>
 
         <nav class="navbar">
-            <a class="active" href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#dishes">Recipe</a>
-            <a href="#review">Review</a>
+            <a href="Default.aspx#home">Home</a>
+            <a href="Default.aspx#about">About</a>
+            <a href="Default.aspx#recipe">Recipe</a>
+            <a href="Loved.aspx">Loved</a>
         </nav>
 
-        <div class="icons">
-            <i class="fas fa-search" id="search-icon"></i>
-            <a href="#" class="fas fa-heart"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <i class="fas fa-bars" id="menu-bars"></i>
+        <div class="icons" style="display:flex; gap:1rem; justify-content:center; align-items:center;">
+            <p style="font-size:1rem;">Welcome, <%: Session["username"] %></p>
+            <asp:LinkButton ID="LinkButton1" runat="server" CssClass="fa-solid fa-door-open" OnClick="LinkButton1_Click"></asp:LinkButton>
         </div>
-
-        <form action="" id="search-form">
-            <input type="search" name="" id="search-box" placeholder="Search Here">
-        </form>
 
     </header>
     <!-- Header Section Ended -->
@@ -98,7 +92,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
     <!-- My JS -->
-    <script src="../../App_Themes/RecipeTheme/js/script.js"></script>
+    <script src="../../App_Themes/RecipeTheme/js/script3.js"></script>
+        </form>
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Pages/TumpahRasa/TumphRasa.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="TumpahRasa.Pages.TumpahRasa.Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
-    <form runat="server">
         <!-- Home Section Started -->
         <section class="home" id="home">
 
@@ -71,7 +70,7 @@
         <!-- About Section Ended -->
 
         <!-- Dishes Section Started -->
-        <section class="dishes" id="dishes">
+        <section class="dishes" id="recipe">
 
             <h3 class="sub-heading">Something You Never Felt Before!</h3>
             <h1 class="heading">Our Main Menus</h1>
@@ -87,7 +86,7 @@
                             </div>
                             <img src="<%# Eval("thumbnail") %>" alt="">
                             <h3><%# Eval("name") %></h3>
-                            <a href="Detail.aspx?id=<%# Eval("id") %>" class="btn">Add to Cart</a>
+                            <a href="Detail.aspx?id=<%# Eval("id") %>" class="btn">Open</a>
                         </div>
                     </ItemTemplate>
                 </asp:Repeater>
@@ -96,5 +95,4 @@
 
         </section>
         <!-- Dishes Section Ended -->
-    </form>
 </asp:Content>

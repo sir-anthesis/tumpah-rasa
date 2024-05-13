@@ -75,7 +75,7 @@
             <h3 class="sub-heading">Tell Us</h3>
             <h1 class="heading">Your Thoughts!</h1>
 
-            <form method="post" runat="server">
+            <form1 method="post">
                 <div class="wrap">
                     <label for="" class="sub-heading">Rate</label>
                     <input type="number" name="rate">
@@ -85,7 +85,7 @@
                     <textarea name="cmnt" id="" rows="10"></textarea>
                 </div>
                 <asp:Button ID="Button1" runat="server" Text="Add Comment" CssClass="btn" OnClick="Button1_Click" />
-            </form>
+            </form1>
         </section>
         <!-- Comment Section Ended -->
 

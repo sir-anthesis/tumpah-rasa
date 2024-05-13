@@ -67,6 +67,7 @@ namespace TumpahRasa.Models
                 SqlDataReader dr = com.ExecuteReader();
                 if (dr.Read())
                 {
+                    GlobalVariable.memberId = Convert.ToInt32(dr[0]);
                     data.Add(dr[1].ToString());
                     data.Add(dr[3].ToString());
                     dr.Close();
@@ -82,6 +83,7 @@ namespace TumpahRasa.Models
                     SqlDataReader dr2 = com2.ExecuteReader();
                     if (dr2.Read())
                     {
+                        GlobalVariable.adminId = Convert.ToInt32(dr2[0]);
                         data.Add(dr2[1].ToString());
                         data.Add(dr2[3].ToString());
                         dr2.Close();

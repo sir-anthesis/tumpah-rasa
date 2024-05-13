@@ -13,7 +13,14 @@ namespace TumpahRasa.Pages.Admin
         public static string msg = "";
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["log_stat"] == null)
+            {
+                Response.Redirect("/Pages/TumpahRasa/Login.aspx");
+            }
+            else if ((string)Session["role"] == "member")
+            {
+                Response.Redirect("~/Pages/TumpahRasa/Default.aspx");
+            }
         }
     }
 }

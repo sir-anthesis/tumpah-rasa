@@ -9,7 +9,7 @@ namespace TumpahRasa
     public class GlobalVariable
     {
         public static string connString = ConfigurationManager.ConnectionStrings["con"].ConnectionString;
-        public static int adminId = 1;
-        public static int memberId = 1;
+        public static int adminId;
+        public static int memberId;
     }
 }

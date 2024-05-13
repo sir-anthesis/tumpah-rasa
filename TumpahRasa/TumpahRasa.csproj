@@ -92,7 +92,7 @@
     <Content Include="App_Themes\LoginTheme\style3.css" />
     <Content Include="App_Themes\RecipeTheme\asset\abt.jpg" />
     <Content Include="App_Themes\RecipeTheme\css\style.css" />
-    <Content Include="App_Themes\RecipeTheme\js\script.js" />
+    <Content Include="App_Themes\RecipeTheme\js\script3.js" />
     <Content Include="App_Themes\RecipeTheme\thumbs\adjasd.jpg" />
     <Content Include="App_Themes\RecipeTheme\thumbs\baksooo.jpg" />
     <Content Include="App_Themes\RecipeTheme\thumbs\Resep-Rendang-Daging-Sapi-Untuk-Lebaran-Gurih-dan-Nikmat.jpg" />

@@ -12,7 +12,21 @@ namespace TumpahRasa.Pages.TumpahRasa
         public static string msg;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["log_stat"] == null)
+            {
+                Response.Redirect("Login.aspx");
+            }
+            else if ((string)Session["role"] == "admin")
+            {
+                Response.Redirect("~/Pages/Admin/Default.aspx");
+            }
+        }
 
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            Session.Abandon();
+            GlobalVariable.memberId = 0;
+            Response.Redirect("Login.aspx");
         }
     }
 }
